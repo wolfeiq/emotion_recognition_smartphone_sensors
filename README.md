@@ -11,6 +11,8 @@ I collected data from myself in different emotional states, ending up with aroun
 
 📎 [The raw data for the gyroscope and accelerometer sensors for myself can be accessed here](https://docs.google.com/spreadsheets/d/1zumlTXjLASAonMdBG7jH85BS_jsIeyqu/edit?usp=share_link&ouid=106124660547835903984&rtpof=true&sd=true) *(it takes long to load because of the graphs)*.
 
+📎 [Or you can get it on Hugging Face, as well as the Random Forest model](wolfeiq/accelerometer_raw_emotion_recognition_smartphone_sensors)
+
 📁 The feature selection data is uploaded in this repository, as well as the Random Forest training file. 
 
 In the second approach, I collected data from 10 participants 👥 for three emotions (relaxed, frustrated, happy). I similarly dismissed the gyroscope data 🌀. The Random Forest model showed a similar accuracy of around 83% 📉 for this accelerometer data set. I trained four different CNN models 🧠 to experiment which one could perform the best. I picked out a simple baseline one, a deep CNN, an attention-based and a residual model 🔬. The baseline and attention-based models were optimized for their hyperparameters with the Optuna framework 🔧. At the end, all things equal, the baseline CNN performed best after Optuna optimization 🏆. The file is accessible here. The data that was fed in was minimally preprocessed and not denoised in any way ✂️. However, the CNNs were trained on the 3 input data, i.e. 3 emotions and not 5. The optimized CNN model has an accuracy of 95%.
